@@ -1,0 +1,365 @@
+package TableData.TableData;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Tabledataupdate {
+
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\raiak.CORPDOM\\Desktop\\Document\\chromedriver_win32\\chromedriver.exe");
+		
+		WebDriver driver =new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.way2wealth.com/derivatives/fiiactivity/");
+		Thread.sleep(5000);
+		driver.findElement(By.id("ctl00_ContentPlaceHolder1_ctl00_txtstart")).clear();
+		driver.findElement(By.id("ctl00_ContentPlaceHolder1_ctl00_txtstart")).sendKeys("01/01/2005");
+		Thread.sleep(5000);
+		driver.findElement(By.id("ctl00_ContentPlaceHolder1_ctl00_btngo")).click();
+		Thread.sleep(5000);
+		WebElement next=driver.findElement(By.xpath("//*[@id='ctl00_ContentPlaceHolder1_ctl00_grdboard']/tbody/tr[19]/td/table/tbody/tr/td[11]/a"));
+		
+		
+		if(next.isDisplayed())
+		{
+			
+				for (int j=2;j<=11;j++)
+				{
+					
+					
+				String beforeXpath= "//*[@id='ctl00_ContentPlaceHolder1_ctl00_grdboard']/tbody/tr[";
+				String afterXpath_Date="]/td[1]";
+				String afterXpath_IndexBuy="]/td[3]";
+				String afterXpath_IndexSell="]/td[4]";
+				String afterXpath_IndexNet="]/td[5]";
+				String afterXpath_StockBuy="]/td[7]";
+				String afterXpath_StockSell="]/td[8]";
+				String afterXpath_StockNet="]/td[9]";
+				String afterXpath_IndexOptionBuy="]/td[11]";
+				String afterXpath_IndexOptionSell="]/td[12]";
+				String afterXpath_IndexOptionNet="]/td[13]";
+				String afterXpath_StockOptionBuy="]/td[15]";
+				String afterXpath_StockOptionSell="]/td[16]";
+				String afterXpath_StockOptionNet="]/td[17]";
+				String afterXpath_ContractsNumber="]/td[19]";
+				String afterXpath_Amount="]/td[20]";
+				for (int h=1;h<=18;h++)
+				{
+					String finalXpath=beforeXpath+h+afterXpath_Date;
+					String Date=driver.findElement(By.xpath(finalXpath)).getText();
+					System.out.println(Date);
+				
+				}
+				for (int h=1;h<=18;h++)
+				{
+					String finalXpath=beforeXpath+h+afterXpath_IndexBuy;
+					String IndexBuy=driver.findElement(By.xpath(finalXpath)).getText();
+					System.out.println(IndexBuy);
+				
+				}
+				for (int h=1;h<=18;h++)
+				{
+					String finalXpath=beforeXpath+h+afterXpath_IndexSell;
+					String IndexSell=driver.findElement(By.xpath(finalXpath)).getText();
+					System.out.println(IndexSell);
+				
+				}
+				for (int h=1;h<=18;h++)
+				{
+					String finalXpath=beforeXpath+h+afterXpath_IndexNet;
+					String IndexNet=driver.findElement(By.xpath(finalXpath)).getText();
+					System.out.println(IndexNet);
+				
+				}
+				for (int h=1;h<=18;h++)
+				{
+					String finalXpath=beforeXpath+h+afterXpath_StockBuy;
+					String StockBuy=driver.findElement(By.xpath(finalXpath)).getText();
+					System.out.println(StockBuy);
+				
+				}
+				for (int h=1;h<=18;h++)
+				{
+					String finalXpath=beforeXpath+h+afterXpath_StockSell;
+					String StockSell=driver.findElement(By.xpath(finalXpath)).getText();
+					System.out.println(StockSell);
+				
+				}
+				for (int h=1;h<=18;h++)
+				{
+					String finalXpath=beforeXpath+h+afterXpath_StockNet;
+					String StockNet=driver.findElement(By.xpath(finalXpath)).getText();
+					System.out.println(StockNet);
+				
+				}
+				for (int h=1;h<=18;h++)
+				{
+					String finalXpath=beforeXpath+h+afterXpath_IndexOptionBuy;
+					String IndexOptionBuy=driver.findElement(By.xpath(finalXpath)).getText();
+					System.out.println(IndexOptionBuy);
+				
+				}
+				for (int h=1;h<=18;h++)
+				{
+					String finalXpath=beforeXpath+h+afterXpath_IndexOptionSell;
+					String IndexOptionSell=driver.findElement(By.xpath(finalXpath)).getText();
+					System.out.println(IndexOptionSell);
+				
+				}
+				for (int h=1;h<=18;h++)
+				{
+					String finalXpath=beforeXpath+h+afterXpath_IndexOptionNet;
+					String IndexOptionNet=driver.findElement(By.xpath(finalXpath)).getText();
+					System.out.println(IndexOptionNet);
+				
+				}
+				for (int h=1;h<=18;h++)
+				{
+					String finalXpath=beforeXpath+h+afterXpath_StockOptionBuy;
+					String StockOptionBuy=driver.findElement(By.xpath(finalXpath)).getText();
+					System.out.println(StockOptionBuy);
+				
+				}
+				for (int h=1;h<=18;h++)
+				{
+					String finalXpath=beforeXpath+h+afterXpath_StockOptionSell;
+					String StockOptionSell=driver.findElement(By.xpath(finalXpath)).getText();
+					System.out.println(StockOptionSell);
+				
+				}
+				for (int h=1;h<=18;h++)
+				{
+					String finalXpath=beforeXpath+h+afterXpath_StockOptionNet;
+					String StockOptionNet=driver.findElement(By.xpath(finalXpath)).getText();
+					System.out.println(StockOptionNet);
+				
+				}
+				for (int h=1;h<=18;h++)
+				{
+					String finalXpath=beforeXpath+h+afterXpath_ContractsNumber;
+					String ContractsNumber=driver.findElement(By.xpath(finalXpath)).getText();
+					System.out.println(ContractsNumber);
+				
+				}
+				for (int h=1;h<=18;h++)
+				{
+					String finalXpath=beforeXpath+h+afterXpath_Amount;
+					String Amount=driver.findElement(By.xpath(finalXpath)).getText();
+					System.out.println(Amount);
+				
+				}
+			Thread.sleep(50000);
+			if(j==11)
+			{
+				WebElement element= driver.findElement(By.xpath("//*[@id='ctl00_ContentPlaceHolder1_ctl00_grdboard']/tbody/tr[19]/td/table/tbody/tr/td[11]/a"));
+				JavascriptExecutor executor = (JavascriptExecutor) driver;
+				executor.executeScript("arguments[0].click();", element);
+				break;
+				
+			}
+			String pageFirstXpath="//*[@id='ctl00_ContentPlaceHolder1_ctl00_grdboard']/tbody/tr[19]/td/table/tbody/tr/td[";
+			String pageLastXpath="]/a";
+			String pageFinalXpath=pageFirstXpath+j+pageLastXpath;
+			
+				WebElement element= driver.findElement(By.xpath(pageFinalXpath));
+
+				JavascriptExecutor executor = (JavascriptExecutor) driver;
+				executor.executeScript("arguments[0].click();", element);
+			}
+		}
+				
+				else
+				{
+					System.out.println("One page of data available");
+				}
+		Thread.sleep(50000);
+		
+		
+		
+		
+		
+		
+		WebElement next1=driver.findElement(By.xpath("//*[@id='ctl00_ContentPlaceHolder1_ctl00_grdboard']/tbody/tr[19]/td/table/tbody/tr/td[12]/a"));
+				if(next1.isDisplayed())
+				{
+				for (int j=3;j<=12;j++)
+				{
+					
+					
+				String beforeXpath= "//*[@id='ctl00_ContentPlaceHolder1_ctl00_grdboard']/tbody/tr[";
+				String afterXpath_Date="]/td[1]";
+				String afterXpath_IndexBuy="]/td[3]";
+				String afterXpath_IndexSell="]/td[4]";
+				String afterXpath_IndexNet="]/td[5]";
+				String afterXpath_StockBuy="]/td[7]";
+				String afterXpath_StockSell="]/td[8]";
+				String afterXpath_StockNet="]/td[9]";
+				String afterXpath_IndexOptionBuy="]/td[11]";
+				String afterXpath_IndexOptionSell="]/td[12]";
+				String afterXpath_IndexOptionNet="]/td[13]";
+				String afterXpath_StockOptionBuy="]/td[15]";
+				String afterXpath_StockOptionSell="]/td[16]";
+				String afterXpath_StockOptionNet="]/td[17]";
+				String afterXpath_ContractsNumber="]/td[19]";
+				String afterXpath_Amount="]/td[20]";
+				for (int h=1;h<=18;h++)
+				{
+					String finalXpath=beforeXpath+h+afterXpath_Date;
+					String Date=driver.findElement(By.xpath(finalXpath)).getText();
+					System.out.println(Date);
+				
+				}
+				for (int h=1;h<=18;h++)
+				{
+					String finalXpath=beforeXpath+h+afterXpath_IndexBuy;
+					String IndexBuy=driver.findElement(By.xpath(finalXpath)).getText();
+					System.out.println(IndexBuy);
+				
+				}
+				for (int h=1;h<=18;h++)
+				{
+					String finalXpath=beforeXpath+h+afterXpath_IndexSell;
+					String IndexSell=driver.findElement(By.xpath(finalXpath)).getText();
+					System.out.println(IndexSell);
+				
+				}
+				for (int h=1;h<=18;h++)
+				{
+					String finalXpath=beforeXpath+h+afterXpath_IndexNet;
+					String IndexNet=driver.findElement(By.xpath(finalXpath)).getText();
+					System.out.println(IndexNet);
+				
+				}
+				for (int h=1;h<=18;h++)
+				{
+					String finalXpath=beforeXpath+h+afterXpath_StockBuy;
+					String StockBuy=driver.findElement(By.xpath(finalXpath)).getText();
+					System.out.println(StockBuy);
+				
+				}
+				for (int h=1;h<=18;h++)
+				{
+					String finalXpath=beforeXpath+h+afterXpath_StockSell;
+					String StockSell=driver.findElement(By.xpath(finalXpath)).getText();
+					System.out.println(StockSell);
+				
+				}
+				for (int h=1;h<=18;h++)
+				{
+					String finalXpath=beforeXpath+h+afterXpath_StockNet;
+					String StockNet=driver.findElement(By.xpath(finalXpath)).getText();
+					System.out.println(StockNet);
+				
+				}
+				for (int h=1;h<=18;h++)
+				{
+					String finalXpath=beforeXpath+h+afterXpath_IndexOptionBuy;
+					String IndexOptionBuy=driver.findElement(By.xpath(finalXpath)).getText();
+					System.out.println(IndexOptionBuy);
+				
+				}
+				for (int h=1;h<=18;h++)
+				{
+					String finalXpath=beforeXpath+h+afterXpath_IndexOptionSell;
+					String IndexOptionSell=driver.findElement(By.xpath(finalXpath)).getText();
+					System.out.println(IndexOptionSell);
+				
+				}
+				for (int h=1;h<=18;h++)
+				{
+					String finalXpath=beforeXpath+h+afterXpath_IndexOptionNet;
+					String IndexOptionNet=driver.findElement(By.xpath(finalXpath)).getText();
+					System.out.println(IndexOptionNet);
+				
+				}
+				for (int h=1;h<=18;h++)
+				{
+					String finalXpath=beforeXpath+h+afterXpath_StockOptionBuy;
+					String StockOptionBuy=driver.findElement(By.xpath(finalXpath)).getText();
+					System.out.println(StockOptionBuy);
+				
+				}
+				for (int h=1;h<=18;h++)
+				{
+					String finalXpath=beforeXpath+h+afterXpath_StockOptionSell;
+					String StockOptionSell=driver.findElement(By.xpath(finalXpath)).getText();
+					System.out.println(StockOptionSell);
+				
+				}
+				for (int h=1;h<=18;h++)
+				{
+					String finalXpath=beforeXpath+h+afterXpath_StockOptionNet;
+					String StockOptionNet=driver.findElement(By.xpath(finalXpath)).getText();
+					System.out.println(StockOptionNet);
+				
+				}
+				for (int h=1;h<=18;h++)
+				{
+					String finalXpath=beforeXpath+h+afterXpath_ContractsNumber;
+					String ContractsNumber=driver.findElement(By.xpath(finalXpath)).getText();
+					System.out.println(ContractsNumber);
+				
+				}
+				for (int h=1;h<=18;h++)
+				{
+					String finalXpath=beforeXpath+h+afterXpath_Amount;
+					String Amount=driver.findElement(By.xpath(finalXpath)).getText();
+					System.out.println(Amount);
+				
+				}
+			Thread.sleep(50000);
+			if(j==12)
+			{
+				WebElement next2=driver.findElement(By.xpath("//*[@id='ctl00_ContentPlaceHolder1_ctl00_grdboard']/tbody/tr[19]/td/table/tbody/tr/td[12]/a"));
+				if(next2.isDisplayed())
+				{
+					WebElement element= driver.findElement(By.xpath("//*[@id='ctl00_ContentPlaceHolder1_ctl00_grdboard']/tbody/tr[19]/td/table/tbody/tr/td[12]/a"));
+				JavascriptExecutor executor = (JavascriptExecutor) driver;
+				executor.executeScript("arguments[0].click();", element);
+				
+				}
+				else
+				{
+					System.out.println("All data are write to Excel sheet");
+					
+				}
+				continue;
+			}
+			else
+			{
+			
+			String pageFirstXpath="//*[@id='ctl00_ContentPlaceHolder1_ctl00_grdboard']/tbody/tr[19]/td/table/tbody/tr/td[";
+			String pageLastXpath="]/a";
+			String pageFinalXpath=pageFirstXpath+j+pageLastXpath;
+			
+				WebElement element= driver.findElement(By.xpath(pageFinalXpath));
+
+				JavascriptExecutor executor = (JavascriptExecutor) driver;
+				executor.executeScript("arguments[0].click();", element);
+			}
+				}
+			
+				
+			}
+				//*[@id="ctl00_ContentPlaceHolder1_ctl00_grdboard"]/tbody/tr[19]/td/table/tbody/tr/td[3]/a
+				//*[@id="ctl00_ContentPlaceHolder1_ctl00_grdboard"]/tbody/tr[19]/td/table/tbody/tr/td[4]/a
+				//*[@id="ctl00_ContentPlaceHolder1_ctl00_grdboard"]/tbody/tr[19]/td/table/tbody/tr/td[5]/a
+				//*[@id="ctl00_ContentPlaceHolder1_ctl00_grdboard"]/tbody/tr[19]/td/table/tbody/tr/td[11]/a
+				
+				//*[@id="ctl00_ContentPlaceHolder1_ctl00_grdboard"]/tbody/tr[19]/td/table/tbody/tr/td[3]/a
+				//*[@id="ctl00_ContentPlaceHolder1_ctl00_grdboard"]/tbody/tr[19]/td/table/tbody/tr/td[11]/a
+		
+				else
+				{
+					System.out.println("All records are write to excel sheet");
+					
+				}
+	
+}
+
+}
+
+
