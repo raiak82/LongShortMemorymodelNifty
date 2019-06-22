@@ -20,4 +20,4 @@ Correlation of each independent variable is analyzed using multiple feature sele
 Outcome of the technique filters out less significance variable from list of features
 2) Apply time steps lag of 5 which includes the features of previous 5 time steps as input to model
 3) Design and train the LSTM model on training set and test it on test set
-4) Plot the Actual v/s Predicted Nifty Valu
+4) Plot the Actual v/s Predicted Nifty Value
