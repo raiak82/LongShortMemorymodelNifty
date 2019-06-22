@@ -10,28 +10,7 @@ Refer to TALIB documentation https://mrjbq7.github.io/ta-lib/doc_index.html on h
 4) Extract historical Foreign Institutional Investors (FII) data such as Foreign Institutional Investors (FII) future index values and Foreign Institutional Investors (FII) Option index values from https://www.way2wealth.com/derivatives/fiiactivity/
  Note- Historical records are extracted and saved using automated selenium test scripts, as data from the site (https://www.way2wealth.com/derivatives/fiiactivity/) fetched in tabular format with 20 records displayed each time
 5) Finally, all the data mined from different sources are merged together to create a single dataframe.
-                 Features
-1                 	Nifty
-2                  Volume
-3                Turnover
-4                 EMA-200
-5                 EMA-100
-6                  EMA-50
-7                  EMA-21
-8                   EMA-5
-9                    MACD
-10                 RSI-14
-11     BollingerUpperBand
-12    BollingerMiddleBand
-13     BollingerLowerBand
-14      Brent Crude Price
-15              Dow Price
-16                   FTSE
-17        Hang Seng Price
-18          USD-INR price
-19   Volatility Index VIX
-20   FII Index Future Net
-21      FII Index Options
+Features:- Nifty, Volume, Turnover, EMA-200, EMA-100, EMA-50, EMA-21, EMA-5, MACD, RSI-14, BollingerUpperBand, BollingerMiddleBand, BollingerLowerBand, Brent Crude Price, Dow Price, FTSE, Hang Seng Price, USD-INR price, Volatility Index VIX, FII Index Future Net, FII Index Options
 
 
 
@@ -41,4 +20,4 @@ Correlation of each independent variable is analyzed using multiple feature sele
 Outcome of the technique filters out less significance variable from list of features
 2) Apply time steps lag of 5 which includes the features of previous 5 time steps as input to model
 3) Design and train the LSTM model on training set and test it on test set
-4) Plot the Actual v/s Predicted Nifty Value
+4) Plot the Actual v/s Predicted Nifty Valu
